@@ -52,8 +52,7 @@
 }
 
 code {
-  background:#F9F9FF;
-  border: 1px solid hsl(0, 0%, 90%);
+  background:#000;
   padding: 0 0.3em;
   @include border-radius(3px);
   margin: 0;
@@ -81,11 +80,11 @@ code {
 
 .highlight {
   @include border-radius(3px);
-  background:#F9F9FF;
-  border: 1px solid hsl(0, 0%, 90%);
+  background:#000;
 
   pre {
     padding: 15px;
     margin-bottom: 0;
+    font-family: $codeFont;
   }
 }
