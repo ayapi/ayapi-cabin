@@ -12,9 +12,27 @@
   font-size: 2em;
 }
 
-.post-date {
-  font-size: 1.3em;
+.post-detail {
   color: $lightTextColor;
+  background: rgba(0,0,0,.1);
+  padding:5px;
+  @include border-radius(3px);
+  font-size:0.9em;
+  a{
+    color: #d22ac5;
+  }
+  dt,dd{
+    display:inline;
+    margin:0;
+  }
+  dt:after{
+    content:":";
+    display:inline;
+  }
+  dd:after{
+    content:"";
+    display:block;
+  }
 }
 
 .post-body {

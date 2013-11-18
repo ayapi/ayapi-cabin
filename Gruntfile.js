@@ -13,8 +13,32 @@ module.exports = function (grunt) {
             baseUrl: '/'
           },
           pagination: {
-            postsPerPage: 1,
-            listPage: 'src/pages/index.ejs'
+            url: 'tags/:id/index.html',
+            listPage: 'src/pages/tags.ejs',
+            getPostGroups: function (posts) {
+              var postGroups = {};
+
+              posts.forEach(function (post) {
+                console.log(post);
+                post.tags.forEach(function (tag) {
+                  tag = tag.toLowerCase();
+                  if (postGroups[tag]) {
+                    postGroups[tag].posts.push(post);
+                  } else {
+                    postGroups[tag] = {
+                      posts: [post]
+                    };
+                  }
+                });
+              });
+
+              return grunt.util._.map(postGroups, function (postGroup, id) {
+                return {
+                  id: id,
+                  posts: postGroup.posts
+                };
+              });
+            }
           },
           rss: {
             author: 'ayapi',

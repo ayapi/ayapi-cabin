@@ -1,7 +1,8 @@
 {
   title: "Canvas Theme",
   date:  "2013-9-16",
-  description: "Description of Canvas's features"
+  description: "Description of Canvas's features",
+  tags: ["Cabin"]
 }
 
 Canvas is a starter theme for [Cabin](http://cabinjs.com).

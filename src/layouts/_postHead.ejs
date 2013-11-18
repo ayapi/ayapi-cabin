@@ -1,6 +1,13 @@
 <div class="post-head group">
-  <a href="<%= data.baseUrl %><%= post.url %>">
-    <h1 class="post-title"><%= post.title %></h1>
-  </a>
-  <span class="post-date"><%= 'Published ' + post.date.toLocaleDateString().split(',').slice(1).join(',') %></span>
+  <h1 class="post-title"><a href="<%= data.baseUrl %><%= post.url %>"><%= post.title %></a></h1>
+  <dl class="post-detail">
+  <dt>Date</dt>
+  <dd><%= post.date.toLocaleDateString().split(',').slice(1).join(',') %></dd>
+  <dt>Tags</dt>
+  <dd>
+  <% post.tags.forEach(function(tag){ %>
+    <a href="/tags/<%= tag %>"><%= tag %></a>
+  <% }) %>
+  </dd>
+  </dl>
 </div>
