@@ -1,7 +1,6 @@
 <% locals.title = "My Blog" %>
 <% include ../layouts/_header %>
-<% posts.forEach(function(post){ %>
-  <% include ../layouts/_postDescription %>
-<% }) %>
+<% post = posts[0] %>
+<% include ../layouts/_post %>
 
 <% include ../layouts/_footer %>
