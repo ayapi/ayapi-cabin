@@ -1,0 +1,48 @@
+.side{
+  width: 190px;
+  @include box-sizing(border-box);
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include breakpoint(small-phone) {
+    width: 100%;
+    position: static;
+  }
+
+  background: rgba(0,0,0,.1);
+
+  h2{
+    padding-top:0.6em;
+    border-top:1px solid black;
+    font-size:1em;
+  }
+  ul, li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    color: #d22ac5;
+    text-decoration: none;
+  }
+  .tags{
+    display:inline-table;
+    li{
+      display:inline-block;
+      padding-right: 5px;
+      margin-right: 5px;
+      border-right: 1px solid rgba(0,0,0,.3);
+      &:last-of-type{
+        border:0;
+      }
+    }
+  }
+  .recent{
+    li{
+      padding-bottom:0.3em;
+      margin-bottom:0.3em;
+      border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+  }
+}

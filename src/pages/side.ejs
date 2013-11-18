@@ -1,0 +1,25 @@
+<div class="side">
+	<h2>TAGS</h2>
+	<ul class="tags">
+	<% tags = [] %>
+	<% posts.forEach(function(post){ %>
+	  <% post.tags.forEach(function(tag){ %>
+		<% if(tags.indexOf(tag) == -1){ %>
+		  <% tags.push(tag); %>
+		<% } %>
+	  <% }) %>
+	<% }) %>
+	<% tags.forEach(function(tag){ %>
+	  <li><a href="<%= data.baseUrl %>tags/<%=: tag | downcase %>/"><%= tag %></a></li>
+	<% }) %>
+	</ul>
+
+	<h2>RECENT</h2>
+	<ul class="recent">
+	<% posts.forEach(function(post, i){ %>
+	  <% if(i < 20){ %>
+	  <li><a href="<%= data.baseUrl %><%= post.url %>"><%= post.title %></a></li>
+	  <% } %>
+	<% }) %>
+	</ul>
+</div>

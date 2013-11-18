@@ -6,7 +6,7 @@
   <dt>Tags</dt>
   <dd>
   <% post.tags.forEach(function(tag){ %>
-    <a href="/tags/<%= tag %>"><%= tag %></a>
+    <a href="/tags/<%=: tag | downcase %>/"><%= tag %></a>
   <% }) %>
   </dd>
   </dl>

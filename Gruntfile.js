@@ -1,6 +1,26 @@
+var path = require('path');
 module.exports = function (grunt) {
-
   grunt.initConfig({
+    bower: {
+      install: {
+        options: {
+          targetDir: 'src',
+          layout: function(type, component) {
+            var renamedType = type;
+            if (type == 'js') {
+              renamedType = 'scripts';
+            } else if (type == 'css') {
+              renamedType = 'styles';
+            }
+            return path.join(renamedType, component);
+          },
+          install: true,
+          verbose: false,
+          cleanTargetDir: false,
+          cleanBowerDir: false
+        }
+      }
+    },
     pages: {
       posts: {
         src: 'posts',
@@ -14,12 +34,11 @@ module.exports = function (grunt) {
           },
           pagination: {
             url: 'tags/:id/index.html',
-            listPage: 'src/pages/tags.ejs',
+            listPage: 'src/pages/tag.ejs',
             getPostGroups: function (posts) {
               var postGroups = {};
 
               posts.forEach(function (post) {
-                console.log(post);
                 post.tags.forEach(function (tag) {
                   tag = tag.toLowerCase();
                   if (postGroups[tag]) {
