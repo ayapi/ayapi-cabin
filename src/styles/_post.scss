@@ -36,8 +36,10 @@
 }
 
 .post-body {
-  margin-bottom: 1.2em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.6em;
   line-height: 1.65em;
+  border-bottom: 1px solid gainsboro;
 
   p a{
     color: #d22ac5;
@@ -46,4 +48,13 @@
   img {
     max-width: 100%;
   }
+}
+
+.post-more{
+  display:inline-block;
+  font-size:0.9em;
+  text-decoration: none;
+  background: rgba(255,255,255,.1);
+  padding:0 0.3em;
+  @include border-radius(3px);
 }

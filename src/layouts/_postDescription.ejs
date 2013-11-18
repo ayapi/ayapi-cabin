@@ -1,0 +1,6 @@
+<% include ../layouts/_postHead %>
+<div class="post-body">
+  <%-: post.content | replace: /<\/?[^>]+>/gi, '' | truncate: 200 %>...
+  <a class="post-more" href="<%= data.baseUrl %><%= post.url %>">&gt;&gt;続きをみる</a>
+</div>
+
