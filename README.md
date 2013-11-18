@@ -1,0 +1,1 @@
+ぁゃぴのブログを生成するためのCabinJS[https://github.com/CabinJS]
