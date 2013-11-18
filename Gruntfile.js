@@ -15,6 +15,13 @@ module.exports = function (grunt) {
           pagination: {
             postsPerPage: 1,
             listPage: 'src/pages/index.ejs'
+          },
+          rss: {
+            author: 'ayapi',
+            title: 'ayapi.github.io',
+            description: '',
+            url: 'http://ayapi.github.io/',
+            numPosts: 5
           }
         }
       }
@@ -37,7 +44,7 @@ module.exports = function (grunt) {
             'images/**',
             'scripts/**',
             'styles/**.css',
-            'styles/fonts/**',
+            'styles/fonts/**'
           ]
         }]
       }
