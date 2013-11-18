@@ -24,3 +24,5 @@ dist
 # Intellij IDEA
 *.iml
 .idea
+
+Thumbs.db

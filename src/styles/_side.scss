@@ -16,6 +16,9 @@
     padding-top:0.6em;
     border-top:1px solid black;
     font-size:1em;
+    &:first-of-type{
+      border-top: 0;
+    }
   }
   ul, li{
     list-style-type: none;
@@ -25,6 +28,17 @@
   a{
     color: #d22ac5;
     text-decoration: none;
+  }
+  .about{
+    font-size:0.8em;
+    strong{
+      display:block;
+      font-size:1.1em;
+    }
+    .photo{
+      width: 170px;
+      height: auto;
+    }
   }
   .tags{
     display:inline-table;
