@@ -141,7 +141,10 @@ module.exports = function (grunt) {
     },
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'dist',
+        branch: 'master',
+        repo: 'https://github.com/ayapi/ayapi.github.io.git',
+        message: 'Auto-generated commit by grunt-gh-pages'
       },
       src: ['**']
     }
