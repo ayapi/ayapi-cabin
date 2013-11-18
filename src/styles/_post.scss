@@ -1,4 +1,11 @@
 .post-head {
+  border-top: 1px solid gainsboro;
+  padding-top: 0.6em;
+  &:first-of-type{
+    border-top: 0;
+    padding-top: 0;
+  }
+
   padding-bottom: 5px;
 
   a {
@@ -19,7 +26,7 @@
   @include border-radius(3px);
   font-size:0.9em;
   a{
-    color: #d22ac5;
+    color: $baseLinkColor;
   }
   dt,dd{
     display:inline;
@@ -38,16 +45,42 @@
 .post-body {
   margin-bottom: 0.6em;
   padding-bottom: 0.6em;
-  line-height: 1.65em;
-  border-bottom: 1px solid gainsboro;
+  line-height: 1.9;
+
+  margin-left: 13px;
 
   p a{
-    color: #d22ac5;
+    color: $baseLinkColor;
   }
 
   img {
     max-width: 100%;
   }
+
+  h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+  }
+
+  h2{
+    border-left: 3px solid $baseLinkColor;
+    padding-left: 10px;
+    margin-top: 2em;
+    padding-top: 1px;
+    &:first-of-type{
+      margin-top: 0.6em;
+    }
+
+    margin-left: -13px;
+  }
+  h3{
+    border-left: 1px dashed $baseLinkColor;
+    padding-left: 11px;
+    margin-left: -12px;
+  }
+  p+h3{
+    margin-top: 1.8em;
+  }
+
 }
 
 .post-more{

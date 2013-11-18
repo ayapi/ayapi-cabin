@@ -16,6 +16,7 @@
     padding-top:0.6em;
     border-top:1px solid black;
     font-size:1em;
+    font-weight: normal;
     &:first-of-type{
       border-top: 0;
     }
@@ -26,7 +27,7 @@
     margin: 0;
   }
   a{
-    color: #d22ac5;
+    color: $baseLinkColor;
     text-decoration: none;
   }
   .about{
@@ -38,6 +39,19 @@
     .photo{
       width: 170px;
       height: auto;
+      @include breakpoint(small-phone) {
+        width: 80px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        float:left;
+      }
+    }
+    &:after{
+      @include breakpoint(small-phone) {
+        content: "";
+        display: block;
+        clear: left;
+      }
     }
   }
   .tags{

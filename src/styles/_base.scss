@@ -6,6 +6,7 @@ $mainFont: 'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 
 $baseTextColor: $offWhite;
 $baseBackgroundColor: $offBlack;
+$baseLinkColor: #d22ac5;
 $lightTextColor: transparentize($baseTextColor, .5);
 
 @mixin breakpoint($point) {

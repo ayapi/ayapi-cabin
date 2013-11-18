@@ -19,6 +19,9 @@ nav {
   font-size: 1.4em;
   margin: 0;
   padding: 10px 0;
+  span{
+    color: $baseLinkColor;
+  }
 }
 
 .nav-links {
