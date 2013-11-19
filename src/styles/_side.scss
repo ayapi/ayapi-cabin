@@ -37,10 +37,9 @@
       font-size:1.1em;
     }
     .photo{
-      width: 170px;
+      width: 80px;
       height: auto;
       @include breakpoint(small-phone) {
-        width: 80px;
         margin-right: 5px;
         margin-bottom: 5px;
         float:left;

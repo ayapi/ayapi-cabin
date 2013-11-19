@@ -3,7 +3,8 @@
   @include border-radius(3px);
   @include box-sizing(border-box);
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
+  margin-bottom: 0;
   padding: 30px;
   font-size:0.8em;
   color: $lightTextColor;
@@ -11,4 +12,23 @@
   width: 100%;
   position: absolute;
   bottom: 0;
+
+  li{
+    list-style-type: none;
+    display: inline;
+    &:after{
+      content: "\a0|";
+      color: rgba(0, 0, 0, 0.3);
+    }
+    &:last-of-type:after{
+      content: "";
+    }
+
+    @include breakpoint(small-phone) {
+      display: block;
+      &:after{
+        content: "";
+      }
+    }
+  }
 }

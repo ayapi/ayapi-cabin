@@ -37,8 +37,17 @@
     display:inline;
   }
   dd:after{
-    content:"";
-    display:block;
+    content: "\A";
+    white-space: pre;
+  }
+  dd a{
+    &:after{
+      content: "\a0|";
+      color: rgba(0, 0, 0, 0.3);
+    }
+    &:last-of-type:after{
+      content: "";
+    }
   }
 }
 
