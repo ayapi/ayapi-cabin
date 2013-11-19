@@ -137,7 +137,10 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      dist: 'dist'
+      dist: 'dist',
+      options:{
+        force: true
+      }
     },
     'gh-pages': {
       options: {
