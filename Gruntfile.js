@@ -77,7 +77,19 @@ module.exports = function (grunt) {
       }
     },
     compass: {
-      dist: {
+      clean: {
+        options: {
+          clean: true
+        }
+      },
+      prod: {
+        options: {
+          sassDir: 'src/styles',
+          cssDir: 'dist/styles',
+          outputStyle: 'compressed'
+        }
+      },
+      dev: {
         options: {
           sassDir: 'src/styles',
           cssDir: 'dist/styles'
@@ -112,7 +124,7 @@ module.exports = function (grunt) {
       },
       compass: {
         files: ['src/styles/**'],
-        tasks: ['compass']
+        tasks: ['compass:dev']
       },
       copy: {
         files: [
@@ -162,17 +174,26 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', [
-    'clean',
-    'pages',
-    'compass',
-    'copy'
-  ]);
+  grunt.registerTask('build', 'A task that builds cabin site', function(arg){
+    if (arguments.length === 0) {
+      grunt.log.writeln(this.name + " task cannot run without argument 'dev' or 'prod'.");
+      return false;
+    }
+    var tasks = [
+      'clean',
+      'pages',
+      'compass:clean',
+      'compass:' + arg,
+      'copy'
+    ];
+    grunt.task.run(tasks);
+    return true;
+  });
 
-  grunt.registerTask('deploy', ['build', 'gh-pages']);
+  grunt.registerTask('deploy', ['build:prod', 'gh-pages']);
 
   grunt.registerTask('server', [
-    'build',
+    'build:dev',
     'connect',
     'open',
     'watch'
