@@ -19,6 +19,17 @@ nav {
   }
 }
 
+.icon-feed{
+  display: inline-block;
+  font-size:0.8em;
+  height: 1em;
+  line-height: 1;
+  color:#FF9F25;
+  @include border-radius(3px);
+  overflow: hidden;
+  background:white;
+}
+
 .nav-links {
   margin: 0;
   list-style: none;
