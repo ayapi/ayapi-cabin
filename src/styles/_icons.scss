@@ -40,7 +40,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-[class*="icon-"]:before {
+.icon-before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -51,14 +51,18 @@ you can use the generic selector below, but it's slower:
   -webkit-font-smoothing: antialiased;
 }
 .icon-link:before {
+  @extend .icon-before;
   content: "\e600";
 }
 .icon-github:before {
+  @extend .icon-before;
   content: "\e601";
 }
 .icon-twitter:before {
+  @extend .icon-before;
   content: "\e602";
 }
 .icon-feed:before {
+  @extend .icon-before;
   content: "\e603";
 }
