@@ -5,7 +5,7 @@ module.exports = function (grunt) {
       install: {
         options: {
           targetDir: 'src',
-          layout: function(type, component) {
+          layout: function (type, component) {
             var renamedType = type;
             if (type == 'js') {
               renamedType = 'scripts';
@@ -32,33 +32,40 @@ module.exports = function (grunt) {
           data: {
             baseUrl: '/'
           },
-          pagination: {
-            url: 'tags/:id/index.html',
-            listPage: 'src/pages/tag.ejs',
-            getPostGroups: function (posts) {
-              var postGroups = {};
+          pagination: [
+            {
+              postsPerPage: 20,
+              listPage: 'src/pages/archives.ejs',
+              url: 'archives/:id/index.html'
+            },
+            {
+              url: 'tags/:id/index.html',
+              listPage: 'src/pages/tag.ejs',
+              getPostGroups: function (posts) {
+                var postGroups = {};
 
-              posts.forEach(function (post) {
-                post.tags.forEach(function (tag) {
-                  tag = tag.toLowerCase();
-                  if (postGroups[tag]) {
-                    postGroups[tag].posts.push(post);
-                  } else {
-                    postGroups[tag] = {
-                      posts: [post]
-                    };
-                  }
+                posts.forEach(function (post) {
+                  post.tags.forEach(function (tag) {
+                    tag = tag.toLowerCase();
+                    if (postGroups[tag]) {
+                      postGroups[tag].posts.push(post);
+                    } else {
+                      postGroups[tag] = {
+                        posts: [post]
+                      };
+                    }
+                  });
                 });
-              });
 
-              return grunt.util._.map(postGroups, function (postGroup, id) {
-                return {
-                  id: id,
-                  posts: postGroup.posts
-                };
-              });
+                return grunt.util._.map(postGroups, function (postGroup, id) {
+                  return {
+                    id: id,
+                    posts: postGroup.posts
+                  };
+                });
+              }
             }
-          },
+          ],
           rss: {
             author: 'ayapi',
             title: 'ayapi.github.io',
@@ -79,17 +86,19 @@ module.exports = function (grunt) {
     },
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'src',
-          dest: 'dist',
-          src: [
-            'images/**',
-            'scripts/**',
-            'styles/**.css',
-            'styles/fonts/**'
-          ]
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src',
+            dest: 'dist',
+            src: [
+              'images/**',
+              'scripts/**',
+              'styles/**.css',
+              'styles/fonts/**'
+            ]
+          }
+        ]
       }
     },
     watch: {
@@ -138,7 +147,7 @@ module.exports = function (grunt) {
     },
     clean: {
       dist: 'dist',
-      options:{
+      options: {
         force: true
       }
     },

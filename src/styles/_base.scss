@@ -22,6 +22,14 @@ a {
   color: $baseTextColor;
 }
 
+@mixin btn(){
+  display:inline-block;
+  font-size:0.9em;
+  text-decoration: none;
+  background: rgba(255,255,255,.1);
+  padding:0 0.3em;
+  @include border-radius(3px);
+}
 
 // clearfix
 .group:after {
@@ -74,25 +82,15 @@ body {
 }
 
 .pagination {
-
+  border-top: 1px solid black;
+  padding: 20px 0;
+  text-align: center;
   a {
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 0 20px;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @include btn;
+    line-height: 1.9;
   }
 }
 
-.older {
-  float: left;
-}
-
-.newer {
-  float: right;
-}
 
 .cabin {
   position: fixed;

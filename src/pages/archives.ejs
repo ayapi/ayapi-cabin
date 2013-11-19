@@ -1,6 +1,18 @@
 <% locals.title = "Archives" %>
 <% include ../layouts/_header %>
 <% posts.forEach(function(post){ %>
-  <% include ../layouts/_postHead %>
+  <% include ../layouts/_postDescription %>
 <% }) %>
+
+<div class="pagination group">
+  <% for (var i = 0; i < pages.length; i++) { %>
+    <% var page = pages[i] %>
+    <% if (i === currentIndex + 1) { %>
+      <a href="<%= data.baseUrl %><%= page.url %>" class="older"> PREV &#8594;</a>
+    <% } else if (i === currentIndex - 1) { %>
+      <a href="<%= data.baseUrl %><%= page.url %>" class="newer"> &#8592; NEXT</a>
+    <% } %>
+  <% } %>
+</div>
+
 <% include ../layouts/_footer %>

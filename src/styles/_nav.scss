@@ -5,11 +5,6 @@ nav {
   a {
     color: $offWhite;
     text-decoration: none;
-
-    &:hover {
-      color: $offWhite;
-      text-decoration: underline;
-    }
   }
 }
 
@@ -28,11 +23,18 @@ nav {
   margin: 0;
   list-style: none;
   float: right;
-  font-size: 1.2em;
   padding: 12px 0 0;
 
   li {
     float: left;
     padding-right: 1.7em;
+    &:last-of-type{
+      padding-right: 0;
+    }
+
+    a{
+      @include btn;
+      line-height: 1.9;
+    }
   }
 }

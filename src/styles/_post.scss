@@ -93,10 +93,5 @@
 }
 
 .post-more{
-  display:inline-block;
-  font-size:0.9em;
-  text-decoration: none;
-  background: rgba(255,255,255,.1);
-  padding:0 0.3em;
-  @include border-radius(3px);
+  @include btn;
 }
