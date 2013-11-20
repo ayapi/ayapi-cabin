@@ -1,5 +1,6 @@
 var path = require('path');
 module.exports = function (grunt) {
+  var site = grunt.file.readJSON('site.json');
   grunt.initConfig({
     bower: {
       install: {
@@ -29,9 +30,7 @@ module.exports = function (grunt) {
         url: 'posts/:title/',
         options: {
           pageSrc: 'src/pages',
-          data: {
-            baseUrl: '/'
-          },
+          data: site,
           pagination: [
             {
               postsPerPage: 20,
@@ -67,10 +66,10 @@ module.exports = function (grunt) {
             }
           ],
           rss: {
-            author: 'ayapi',
-            title: 'ayapi.github.io',
-            description: '',
-            url: 'http://ayapi.github.io/',
+            author: site.author,
+            title: site.title,
+            description: site.description,
+            url: site.url,
             numPosts: 5
           }
         }
