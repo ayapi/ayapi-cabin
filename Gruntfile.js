@@ -27,10 +27,13 @@ module.exports = function (grunt) {
         src: 'posts',
         dest: 'dist',
         layout: 'src/layouts/post.ejs',
-        url: 'posts/:title/',
+        url: ':sourcePath/',
         options: {
           pageSrc: 'src/pages',
           data: site,
+          formatPostUrl: function (url) {
+            return url.replace(/\..+$/, '').toLowerCase();
+          },
           pagination: [
             {
               postsPerPage: 20,
