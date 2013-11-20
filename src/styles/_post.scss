@@ -95,3 +95,18 @@
 .post-more{
   @include btn;
 }
+
+.post-social{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  display: inline-block;
+  >li{
+    display: block;
+    height:20px;
+    margin: 0;
+    padding: 0;
+    margin-bottom:10px;
+  }
+}
