@@ -79,6 +79,7 @@ body {
   @include breakpoint(small-phone) {
     margin-right: 0;
   }
+  position: relative;
 }
 
 .pagination {

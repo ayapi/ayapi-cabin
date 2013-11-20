@@ -97,16 +97,30 @@
 }
 
 .post-social{
-  list-style-type: none;
+  display: inline-table;
+  height: 20px;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
-  display: inline-block;
+
+  position: absolute;
+  right: 0;
+  @include breakpoint(small-phone) {
+    position: static;
+  }
+
+  list-style-type: none;
   >li{
-    display: block;
+    display: inline-block;
     height:20px;
     margin: 0;
     padding: 0;
-    margin-bottom:10px;
+    overflow: hidden;
+    &.facebook{
+      width: 70px;
+    }
+    &.twitter{
+      margin-left: 5px;
+      margin-right: 8px;
+    }
   }
 }
