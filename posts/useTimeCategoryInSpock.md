@@ -57,10 +57,10 @@ class CalculatorSpec extends Specification {
 		def calc = new Calculator();
 
 		when:
-		def expects = intervals.collect({
+		def msecs = intervals.collect({
 			(it as Duration).toMilliseconds();
 		});
-		def average = calc.calculateAverageInterval(expects);
+		def average = calc.calculateAverageInterval(msecs);
 
 		then:
 		average.equals((result as Duration).toMilliseconds());
@@ -96,10 +96,10 @@ class CalculatorSpec extends Specification {
 		def calc = new Calculator();
 
 		when:
-		def expects = intervals.collect({
+		def msecs = intervals.collect({
 			(it as Duration).toMilliseconds();
 		});
-		def average = calc.calculateAverageInterval(expects);
+		def average = calc.calculateAverageInterval(msecs);
 
 		then:
 		average.equals((result as Duration).toMilliseconds());
