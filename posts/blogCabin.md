@@ -2,7 +2,7 @@
   title: "CabinとGitHub Pagesでブログを作ってみてる",
   date:  "2013-11-18",
   description: "Cabinゎ、NodeJSてかGruntで動く静的サイトジェネレーターだそーです GitHub Pagesにかんたんにデプロイできるみたぃです",
-  tags: ["Cabin", "JavaScript", "NodeJS", "EJS"]
+  tags: ["Cabin", "JavaScript", "Node", "EJS"]
 }
 
 ## Jekyllを見送った理由
