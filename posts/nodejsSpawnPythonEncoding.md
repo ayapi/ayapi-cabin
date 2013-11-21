@@ -102,7 +102,7 @@ Active code pageが65001だけど、
 Pythonの標準入出力ゎCP932って出てます(>_<)
 これゎ、とても困ります
 
-## 環境変数「PYTHONENCODING」の存在
+## 環境変数「PYTHONIOENCODING」の存在
 
 Pythonのドキュメントをちゃんと読んでみると、
 以下のょーな記述がぁりました
@@ -119,7 +119,9 @@ Pythonのドキュメントをちゃんと読んでみると、
 C:/test/test2.js
 ```javascript
 var spawn = require('child_process').spawn;
-var python_test = spawn('python', ['test.py'], {env:{"PYTHONIOENCODING":"cp65001"}});
+var python_test = spawn('python', ['test.py'], {
+    env:{ "PYTHONIOENCODING" : "cp65001" }
+});
 
 python_test.stdout.on('data', function (data) {
   console.log(data);
