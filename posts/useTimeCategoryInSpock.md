@@ -113,8 +113,9 @@ class CalculatorSpec extends Specification {
 ```
 
 Spockのしくみがぁんまりまだゎかってなぃので、
-`where:`で`@use`が効かなぃのがSpockの仕様なのか、
-それとも`TimeCategory`の仕様なのかょくゎかんなぃんですけど、
+最初のゃりかたで`where:`で`@use`が効かなかったのが
+Spockの仕様なのか、それとも`TimeCategory`の仕様なのか
+ょくゎかんなぃんですけど、
 
 とにかくこんなふーに、時間がとてもみゃすくかけるのが、
 ぁゃぴ的にゎ気に入ってます
