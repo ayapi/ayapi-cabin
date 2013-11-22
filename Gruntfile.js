@@ -169,10 +169,17 @@ module.exports = function (grunt) {
       options: {
         base: 'dist',
         branch: 'master',
-        repo: 'https://github.com/ayapi/ayapi.github.io.git',
+        repo: 'git@github.com:ayapi/ayapi.github.io.git',
         message: 'Auto-generated commit by grunt-gh-pages'
       },
       src: ['**']
+    },
+    gitpush: {
+      src: {
+        options: {
+          branch: 'master'
+        }
+      }
     }
   });
 
@@ -192,7 +199,7 @@ module.exports = function (grunt) {
     return true;
   });
 
-  grunt.registerTask('deploy', ['build:prod', 'gh-pages']);
+  grunt.registerTask('deploy', ['gitpush:src', 'build:prod', 'gh-pages']);
 
   grunt.registerTask('server', [
     'build:dev',
