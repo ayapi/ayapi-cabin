@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "jquery": "~2.0.3",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "gist-embed": "git@github.com:blairvanderhoof/gist-embed.git"
   },
   "exportsOverride": {
     "underscore": {
@@ -11,6 +12,9 @@
     },
     "jquery": {
       "js": "**/*.js"
+    },
+    "gist-embed": {
+      "js": "*.js"
     }
   }
 }

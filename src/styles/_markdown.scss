@@ -51,14 +51,13 @@
   }
 }
 
-code {
+code:not([data-gist-id]) {
   background:#000;
   padding: 0 0.2em;
   @include border-radius(3px);
   display: inline-block;
   margin: 0 0.2em;
   font-family: $codeFont;
-  font-size: 0.9em;
 }
 
 .markdown pre {
@@ -77,20 +76,62 @@ code {
     display: block;
     background:transparent;
     @include border-radius(0);
-    font-size: 0.85em;
-    @include breakpoint(small-phone) {
-      font-size: 0.8em;
-    }
+  }
+}
+
+@mixin codeFontSize{
+  font-size: 0.85em;
+  @include breakpoint(small-phone) {
+    font-size: 0.80em;
   }
 }
 
 .highlight {
+  width: 100%;
   @include border-radius(3px);
-  background:#000;
 
   pre {
     padding: 15px;
     margin-bottom: 0;
+    tab-size:4;
     font-family: $codeFont;
+    @include codeFontSize;
+  }
+}
+
+@mixin filter( $var ){
+  -webkit-filter: $var;
+  -moz-filter: $var;
+  -ms-filter: $var;
+  -o-filter: $var;
+  filter: $var;
+}
+
+.gist{
+  .gist-syntax .highlight{
+    @include border-radius(0);
+  }
+
+  .gist-file{
+    border:0;
+    overflow: hidden;
+    .gist-data{
+      background-color: transparent;
+      border-bottom:0;
+      .line-numbers{
+        @include codeFontSize;
+        @include filter(unquote("invert()"));
+        border-right: 0;
+        width: 1em;
+      }
+      .line-data{
+        text-indent: 0.5em;
+      }
+    }
+    .gist-meta{
+      @include filter(unquote("invert()"));
+      @include codeFontSize;
+      padding: 0.2em 10px;
+    }
   }
 }
