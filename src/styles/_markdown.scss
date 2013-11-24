@@ -105,6 +105,8 @@ code:not([data-gist-id]) {
   -ms-filter: $var;
   -o-filter: $var;
   filter: $var;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .gist{
