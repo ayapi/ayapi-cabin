@@ -51,6 +51,13 @@
   }
 }
 
+@mixin codeFontSize{
+  font-size: 0.85em;
+  @include breakpoint(small-phone) {
+    font-size: 0.80em;
+  }
+}
+
 code:not([data-gist-id]) {
   background:#000;
   padding: 0 0.2em;
@@ -58,6 +65,7 @@ code:not([data-gist-id]) {
   display: inline-block;
   margin: 0 0.2em;
   font-family: $codeFont;
+  @include codeFontSize;
 }
 
 .markdown pre {
@@ -67,7 +75,6 @@ code:not([data-gist-id]) {
 
   pre {
     margin: 0;
-
   }
 
   code {
@@ -79,39 +86,35 @@ code:not([data-gist-id]) {
   }
 }
 
-@mixin codeFontSize{
-  font-size: 0.85em;
-  @include breakpoint(small-phone) {
-    font-size: 0.80em;
-  }
-}
-
 .highlight {
   width: 100%;
+  background: #000;
   @include border-radius(3px);
 
   pre {
-    padding: 15px;
+    padding: 0.5em 1em;
     margin-bottom: 0;
     tab-size:4;
     font-family: $codeFont;
-    @include codeFontSize;
   }
 }
 
-@mixin filter( $var ){
-  -webkit-filter: $var;
-  -moz-filter: $var;
-  -ms-filter: $var;
-  -o-filter: $var;
-  filter: $var;
+%invert {
+  filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><filter id="invert"><feColorMatrix color-interpolation-filters="sRGB" in="SourceGraphic" type="matrix" values="-1,0,0,0,1,0,-1,0,0,1,0,0,-1,0,1,0,0,0,1,0"/></filter></svg>#invert');
+  filter: unquote("invert(1)");
+  -ms-filter: unquote("invert(1)");
+  -webkit-filter: unquote("invert(1)");
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .gist{
   .gist-syntax .highlight{
     @include border-radius(0);
+  }
+  pre{
+    @include codeFontSize;
   }
 
   .gist-file{
@@ -122,7 +125,7 @@ code:not([data-gist-id]) {
       border-bottom:0;
       .line-numbers{
         @include codeFontSize;
-        @include filter(unquote("invert()"));
+        @extend %invert;
         border-right: 0;
         width: 1em;
       }
@@ -131,9 +134,23 @@ code:not([data-gist-id]) {
       }
     }
     .gist-meta{
-      @include filter(unquote("invert()"));
+      @extend %invert;
       @include codeFontSize;
       padding: 0.2em 10px;
+      text-shadow: 1px 1px #fff;
     }
+  }
+}
+
+@media screen and (min-width:0\0) {
+  _::-ms-reveal,
+  .gist .gist-file .gist-data .line-numbers:before,
+  .gist .gist-file .gist-meta:before{
+    content: "";
+    width: 0; height: 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    z-index: 9999;
+    outline: 2000px solid invert;
   }
 }

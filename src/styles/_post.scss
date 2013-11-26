@@ -89,7 +89,14 @@
   p+h3{
     margin-top: 1.8em;
   }
-
+  h4{
+    &:before{
+      content:"\203A\2002";
+      color: $baseLinkColor;
+    }
+    padding-left: 0;
+    margin-left: -0.8em;
+  }
 }
 
 .post-more{
