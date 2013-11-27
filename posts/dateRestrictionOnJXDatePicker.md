@@ -36,17 +36,17 @@ public class Calendar extends JPanel {
 [Apache Commons Lang](http://commons.apache.org/proper/commons-lang/)の`DateUtils`クラスをっかぅと、
 日付の計算もとてもかんたんにできます
 
-<code data-gist-id="7592669" data-gist-line="2" data-gist-hide-footer="true" data-gist-hide-line-numbers="true"></code>
+<code data-gist-id="7592669" data-gist-line="2" data-gist-hide-footer="true" data-gist-hide-line-numbers="true">https://gist.github.com/ayapi/7592669 Line:2</code>
 
 `DateUtils`クラスでの明日と1週間後の計算ゎこんなかんじでかんたんです
 
-<code data-gist-id="7592669" data-gist-line="15-16"></code>
+<code data-gist-id="7592669" data-gist-line="15-16">https://gist.github.com/ayapi/7592669 Line:15-16</code>
 
 もし昨日とかがほしければ`addDays`で負の値を足せばできます
 
 それで`JXDatePicker`のインスタンスに、
 ぃっからぃっまで選択可能にするのかを指定します
-<code data-gist-id="7592669" data-gist-line="18-20"></code>
+<code data-gist-id="7592669" data-gist-line="18-20">https://gist.github.com/ayapi/7592669 Line:18-20</code>
 
 
 ### みためを整ぇる
@@ -56,7 +56,7 @@ public class Calendar extends JPanel {
 
 バツ印の色を変ぇるにゎ`UIManager`のUIプロパティで色を指定します
 
-<code data-gist-id="7592669" data-gist-line="22"></code>
+<code data-gist-id="7592669" data-gist-line="22">https://gist.github.com/ayapi/7592669 Line:22</code>
 
 このょーにUIプロパティーを変ぇた時ゎ、
 値を変ぇたことのをUIに適用(更新)するのが必要で、
@@ -93,4 +93,4 @@ Syntheticaをっかってる状態でJXDatePickerを動かすにゎ
 
 てことで、できたコードがこれですー＼(^o^)／
 
-<code data-gist-id="7592669"></code>
+<code data-gist-id="7592669">https://gist.github.com/ayapi/7592669</code>
