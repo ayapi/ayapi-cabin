@@ -59,7 +59,7 @@ public class Calendar extends JPanel {
 <code data-gist-id="7592669" data-gist-line="22">https://gist.github.com/ayapi/7592669 Line:22</code>
 
 このょーにUIプロパティーを変ぇた時ゎ、
-値を変ぇたことのをUIに適用(更新)するのが必要で、
+値を変ぇたことをUIに適用(更新)するのが必要で、
 `JComponent`の`updateUI()`メソッドもしくゎ
 `SwingUtilities.updateComponentTreeUI()`どちらかをっかぃます
 
