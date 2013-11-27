@@ -10,7 +10,7 @@ Javaでゎ[ApacheCommonsMath](http://commons.apache.org/proper/commons-math/)の
 
 標準偏差を求めるのゎ、たったこれだけでできます
 
-<code data-gist-id="7681028" data-gist-line="8-15" data-gist-file="Calculator.java"></code>
+<code data-gist-id="7681028" data-gist-line="8-15" data-gist-file="Calculator.java">https://gist.github.com/ayapi/7681028#file-calculator-java Line:8-15</code>
 
 けど、標準偏差を求める時に気をっけなきゃぃけなぃのが、その種類です
 ひとことで標準偏差って言っても、
@@ -42,7 +42,7 @@ Excelでゅー`STDEVP()`なんですけど、
 けど、母分散を求めるメソッドゎぁるので、
 それの平方根を取ればできます
 
-<code data-gist-id="7681028" data-gist-line="16-24" data-gist-file="Calculator.java"></code>
+<code data-gist-id="7681028" data-gist-line="16-24" data-gist-file="Calculator.java">https://gist.github.com/ayapi/7681028#file-calculator-java Line:16-24</code>
 
 なんで「Excelでゅーと」とか言ってるかってゅーと
 Spockのテストデータっくるときに
@@ -50,4 +50,4 @@ Excelでゃればラクなんだってこと、ぃまさら気づぃたからで
 今まで一生懸命、電卓でゃってました　まじばかすぎます
 さすがにこーゅー計算ゎ電卓でゃるのたぃへんです
 
-<code data-gist-id="7681028" data-gist-file="CalculatorSpec.groovy"></code>
+<code data-gist-id="7681028" data-gist-file="CalculatorSpec.groovy">https://gist.github.com/ayapi/7681028#file-calculatorspec-groovy</code>
