@@ -1,5 +1,5 @@
 {
-  title: "WindowsのNode.jsでOpenCVを使ぅ",
+  title: "WindowsのNode.jsでOpenCV node-opencv編",
   date:  "2013-12-25 22:41",
   description: "node-opencvをWindows8 64bit環境でインストールする方法です",
   tags: ["Node", "OpenCV"]
@@ -165,3 +165,6 @@ node sample.js
 ![生成された3枚と元画像1枚](/images/node-opencv_comvert_image_result.jpg)
 
 まだょくゎかりませんが、これから使ぃこんでみょーかなと思ってます
+
+## 追記：その後の感想とか
+[WindowsのNode.jsでOpenCV opencv-node編](/posts/opencv-nodeonwin8x64/)
