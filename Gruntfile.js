@@ -38,7 +38,7 @@ module.exports = function (grunt) {
               .toLowerCase() // change everything to lowercase
               .replace(/^\s+|\s+$/g, '') // trim leading and trailing spaces
               .replace(/[_|\s|\.]+/g, '-') // change all spaces, periods and underscores to a hyphen
-              .replace(/[^a-z\u0400-\u04FF0-9-]+/g, '') // remove all non-cyrillic, non-numeric characters except the hyphen
+              .replace(/[^a-z\u0400-\u04FF0-9-\/]+/g, '') // remove all non-cyrillic, non-numeric characters except the hyphen
               .replace(/[-]+/g, '-') // replace multiple instances of the hyphen with a single instance
               .replace(/^-+|-+$/g, ''); // trim leading and trailing hyphens
           },
