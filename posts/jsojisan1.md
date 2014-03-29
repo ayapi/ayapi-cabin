@@ -17,9 +17,16 @@
 
 ↓LT㊥の㊢メを撮って頂ぃてました＼(^o^)／
 
-![JSオジサンぁゃぴLT](/images/jsojisan1_ayp_lt1.jpg)
-
 ![JSオジサンぁゃぴLT](/images/jsojisan1_ayp_lt2.jpg)
+
+↓21cafeのFaceBookページにぃっぱぃ載せてもらってました＼(^o^)／
+<div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=480810265351902&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1" data-width="600"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/photo.php?fbid=480810265351902&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1">投稿</a> by <a href="https://www.facebook.com/21cafe.shibuya">21cafe＜ニイイチカフェ＞</a>.</div></div>
+<div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=480810535351875&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1" data-width="600"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/photo.php?fbid=480810535351875&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1">投稿</a> by <a href="https://www.facebook.com/21cafe.shibuya">21cafe＜ニイイチカフェ＞</a>.</div></div>
+<div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=480810562018539&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1" data-width="600"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/photo.php?fbid=480810562018539&amp;set=a.480808168685445.1073741832.384656594967270&amp;type=1">投稿</a> by <a href="https://www.facebook.com/21cafe.shibuya">21cafe＜ニイイチカフェ＞</a>.</div></div>
+
 
 ↓ぁの有名な、おだんみつさんと一緒に㊢メ撮って頂きました＼(^o^)／
 
